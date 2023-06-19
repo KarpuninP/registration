@@ -1,0 +1,73 @@
+/* rest css */
+img{border:none;}
+textarea,input,button{outline:none;}
+textarea:focus, input:focus, button:focus{outline:none; border:none;}
+textarea:active, input:active, button:active{outline:none;border:none;}
+a:hover {outline: none;}
+.btn.submit:focus {
+    outline-style: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+label{margin:0;}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/* start here */
+
+body {
+    background-color: rgba(136, 136, 136, 0.7);
+    background-image: url("../pic/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif; /* Красивый шрифт */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block-size {
+    height: 100vh;
+}
+
+.text {
+    color: #fff; /* Белый текст */
+    text-shadow: 2px 2px 4px rgba(128,128,128,0.5); /* Серая тень *
+}
+
+.text h1, p {
+     text-shadow: 2px 2px 4px rgba(128,128,128,0.5); /* Серая тень */
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+}
+
+
+
+
+
+
+

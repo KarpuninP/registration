@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  nginx:
+    build:
+      context: ./docker/nginx
+    volumes:
+      - ./:/var/www/app
+    ports:
+      - "80:80"
+  php-fpm:
+    build:
+      context: ./docker/php-fpm
+    volumes:
+      - ./:/var/www/app
+    environment:
+      PHP_IDE_CONFIG: serverName=${SERVER_NAME}
+    env_file:
+      - .env
+    networks:
+      default:
+        ipv4_address: ${PHP_FPM_IP}
+  
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: ${NETWORK_SUBNET}
+
